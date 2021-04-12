@@ -1,0 +1,5 @@
+micro-operations:
+  context:
+    path: /api
+  paths: 
+    operations: /v1/operations
