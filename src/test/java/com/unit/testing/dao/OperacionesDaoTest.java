@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.unit.testing.dao.OperationsDao;
-
 public class OperacionesDaoTest {
 
 	OperationsDao operations = new OperationsDao();

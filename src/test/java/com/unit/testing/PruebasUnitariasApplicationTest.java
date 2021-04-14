@@ -9,5 +9,5 @@ class PruebasUnitariasApplicationTest {
 	@Test
 	void contextLoads() {
 	}
-	
+
 }
