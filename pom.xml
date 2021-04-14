@@ -77,6 +77,25 @@
 
 	</dependencyManagement>
 
+	<!-- PROFILES -->
+	<profiles>
+	
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>
+					<!-- http://sonarqube-test.openshift-agile-ibm-c6087c840614e08c7d0793941312e4c9-0000.us-south.containers.appdomain.cloud -->
+						http://localhost:9000
+				</sonar.host.url>
+			</properties>
+		</profile>
+	
+	</profiles>
+
 	<reporting>
 
 		<plugins>
@@ -231,7 +250,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- SONARQUBE -->
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
