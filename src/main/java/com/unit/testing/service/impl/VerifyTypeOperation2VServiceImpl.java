@@ -15,7 +15,6 @@ public class VerifyTypeOperation2VServiceImpl implements IVerifyTypeOperation2VS
 
   @Override
   public ResultResponse verifyTypeOperation(Double val1, Double val2, String option) {
-    // TODO Auto-generated method stub
     ResultResponse response = new ResultResponse();
     // Verificamos el tipo de operación que se solicita
     if (option.length() > 1) {

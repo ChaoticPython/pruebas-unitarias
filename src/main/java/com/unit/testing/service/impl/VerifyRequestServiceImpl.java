@@ -20,7 +20,6 @@ public class VerifyRequestServiceImpl implements IVerifyRequestService {
 
   @Override
   public ResultResponse retrieveResultResponse(OperationRequest request) {
-    // TODO Auto-generated method stub
     // Aquí voy a recibir mi resultado
     ResultResponse response = new ResultResponse();
     // Comprobamos nuestra petición

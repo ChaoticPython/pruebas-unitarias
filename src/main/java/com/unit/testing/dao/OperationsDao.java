@@ -5,10 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class OperationsDao {
 
-  public OperationsDao() {
-
-  }
-
   // Operación SUMA
   public Double suma(Double val1, Double val2) {
     return val1 + val2;

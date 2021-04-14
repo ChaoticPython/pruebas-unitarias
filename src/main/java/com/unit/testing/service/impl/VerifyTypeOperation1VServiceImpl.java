@@ -15,7 +15,6 @@ public class VerifyTypeOperation1VServiceImpl implements IVerifyTypeOperation1VS
 
   @Override
   public ResultResponse verifyTypeOperation(Double val, String option) {
-    // TODO Auto-generated method stub
     ResultResponse response = new ResultResponse();
     // Invocamos la operación deseada en el DAO
     if (option.equals("sqrt")) {

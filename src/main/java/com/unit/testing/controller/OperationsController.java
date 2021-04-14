@@ -21,7 +21,7 @@ public class OperationsController {
   @PostMapping("${micro-operations.paths.operations}")
   public ResponseEntity<ResultResponse> retrieveResult(@RequestBody OperationRequest request) {
     ResultResponse response = verifyRequestService.retrieveResultResponse(request);
-    return new ResponseEntity<ResultResponse>(response, HttpStatus.OK);
+    return new ResponseEntity<>(response, HttpStatus.OK);
   }
 
 }
