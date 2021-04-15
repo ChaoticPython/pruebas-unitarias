@@ -29,10 +29,10 @@ public class OperationsController {
   private IVerifyRequestService verifyRequestService;
 
   /**
-   * The method receive the request with the parameters needed for the response
+   * The method receive the request with the parameters needed for the response.
    * 
-   * @param request
-   * @return a response with the result of the operation requested
+   * @param request.
+   * @return a response with the result of the operation requested.
    */
   @PostMapping("${micro-operations.paths.operations}")
   public ResponseEntity<ResultResponse> retrieveResult(@RequestBody OperationRequest request) {
