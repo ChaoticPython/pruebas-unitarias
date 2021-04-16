@@ -4,15 +4,34 @@ import com.unit.testing.dao.OperationsDao;
 import com.unit.testing.exception.BadRequestException;
 import com.unit.testing.model.ResultResponse;
 import com.unit.testing.service.IVerifyTypeOperation2VService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * This is our service class that needs two value to do an operation.
+ * 
+ * @author JulioPachecoSanginez
+ *
+ */
 @Service
 public class VerifyTypeOperation2VServiceImpl implements IVerifyTypeOperation2VService {
 
+  /**
+   * An instance of DAO that contains the operations to-do.
+   */
   @Autowired
   private OperationsDao operationsDao;
 
+  /**
+   * This method receive two values (numbers) and the option, then calls the operation of the option
+   * provided.
+   * 
+   * @param val1 as a number.
+   * @param val2 as a number.
+   * @param option as the operation.
+   * @return a response with the result of the operation received.
+   */
   @Override
   public ResultResponse verifyTypeOperation(Double val1, Double val2, String option) {
     ResultResponse response = new ResultResponse();
