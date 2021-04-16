@@ -36,8 +36,8 @@ public class VerifyTypeOperation1VServiceImplTest {
   private VerifyTypeOperation1VServiceImpl verifyOperation;
 
   /**
-   * Given a value and the option.
-   * When the value or the option are incorrects.
+   * Given a value and the option,
+   * When the value or the option is incorrect,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -50,8 +50,8 @@ public class VerifyTypeOperation1VServiceImplTest {
   }
 
   /**
-   * Given a value and the option.
-   * When the value of the option is 'sqrt'.
+   * Given a value and the option,
+   * When the value of the option is 'sqrt',
    * Then invoke the DAO instance to do the 'square root' operation and add the result
    * to the response, then return them.
    */
@@ -73,8 +73,8 @@ public class VerifyTypeOperation1VServiceImplTest {
   }
 
   /**
-   * Given a value and the option.
-   * When the value of the option is 'cbrt'.
+   * Given a value and the option,
+   * When the value of the option is 'cbrt',
    * Then invoke the DAO instance to do the 'cubic root' operation and add the result
    * to the response, then return them.
    */
@@ -96,8 +96,8 @@ public class VerifyTypeOperation1VServiceImplTest {
   }
 
   /**
-   * Given a value and the option.
-   * When the value of the option is 'exp'.
+   * Given a value and the option,
+   * When the value of the option is 'exp',
    * Then invoke the DAO instance to do the 'exponential' function and add the result
    * to the response, then return them.
    */
@@ -119,8 +119,8 @@ public class VerifyTypeOperation1VServiceImplTest {
   }
 
   /**
-   * Given a value and the option.
-   * When the value of the option is 'abs'.
+   * Given a value and the option,
+   * When the value of the option is 'abs',
    * Then invoke the DAO instance to do the 'absolute value' operation and add the result
    * to the response, then return them.
    */

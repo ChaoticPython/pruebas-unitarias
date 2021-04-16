@@ -35,8 +35,8 @@ public class OperationsControllerTest {
   private OperationsController operationController;
 
   /**
-   * Given a request. 
-   * When the request is valid. 
+   * Given a request,
+   * When the request is valid, 
    * Then return the response with the result and the HTTP status.
    */
   @Test

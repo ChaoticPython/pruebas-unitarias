@@ -36,8 +36,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   private VerifyTypeOperation2VServiceImpl verifyOperation;
 
   /**
-   * Given the values and the option.
-   * When the option is incorrect.
+   * Given the values and the option,
+   * When the option is incorrect,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -48,8 +48,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the option doesn't exist.
+   * Given the values and the option,
+   * When the option doesn't exist,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -60,8 +60,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the value of the option is '+'.
+   * Given the values and the option,
+   * When the value of the option is '+',
    * Then invoke the DAO instance to do the 'sum' operation and add the result
    * to the response, then return them.
    */
@@ -84,8 +84,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the value of the option is '-'.
+   * Given the values and the option,
+   * When the value of the option is '-',
    * Then invoke the DAO instance to do the 'subtraction' operation and add the result
    * to the response, then return them.
    */
@@ -108,8 +108,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the value of the option is '*'.
+   * Given the values and the option,
+   * When the value of the option is '*',
    * Then invoke the DAO instance to do the 'multiplication' operation and add the result
    * to the response, then return them.
    */
@@ -132,8 +132,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the value of the option is '/'.
+   * Given the values and the option,
+   * When the value of the option is '/',
    * Then invoke the DAO instance to do the 'division' operation and add the result
    * to the response, then return them.
    */
@@ -156,8 +156,8 @@ public class VerifyTypeOperation2VServiceImplTest {
   }
 
   /**
-   * Given the values and the option.
-   * When the value of the option is '^'.
+   * Given the values and the option,
+   * When the value of the option is '^',
    * Then invoke the DAO instance to do the 'power' operation and add the result
    * to the response, then return them.
    */

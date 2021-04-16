@@ -43,8 +43,8 @@ public class VerifyRequestServiceImplTest {
   private VerifyRequestServiceImpl verifyRequest;
 
   /**
-   * Given a request.
-   * When the request is empty.
+   * Given a request,
+   * When the request is empty,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -58,8 +58,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has the two values (numbers) as null.
+   * Given a request,
+   * When the request has the two values (numbers) as null,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -73,8 +73,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has the second value (number) and the option null.
+   * Given a request,
+   * When the request has the second value (number) and the option null,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -88,8 +88,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has the first value (number) and the option null.
+   * Given a request
+   * When the request has the first value (number) and the option null,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -103,8 +103,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request only hast the option null.
+   * Given a request,
+   * When the request only hast the option null,
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
@@ -118,8 +118,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has only the second value (number) as null.
+   * Given a request,
+   * When the request has only the second value (number) as null,
    * Then redirect to other service and get the response.
    */
   @Test
@@ -139,8 +139,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has only the first value (number) as null.
+   * Given a request,
+   * When the request has only the first value (number) as null,
    * Then redirect to other service and get the response.
    */
   @Test
@@ -160,8 +160,8 @@ public class VerifyRequestServiceImplTest {
   }
 
   /**
-   * Given a request.
-   * When the request has all the values (numbers and option).
+   * Given a request,
+   * When the request has all the values (numbers and option),
    * Then redirect to other service and get the response.
    */
   @Test

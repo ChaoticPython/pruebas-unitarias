@@ -36,8 +36,8 @@ public class GlobalExceptionHandlerTest {
   private GlobalExceptionHandler geh;
   
   /**
-   * Given a WebRequest and a BadRequestException.
-   * When a BadRequestException happens.
+   * Given a WebRequest and a BadRequestException,
+   * When a BadRequestException happens,
    * Then return the ErrorResponse and the HTTP status.
    */
   @Test

@@ -18,8 +18,8 @@ public class OperationsDaoTest {
   OperationsDao operations = new OperationsDao();
 
   /**
-   * Given two numbers.
-   * When we do the 'add' operation.
+   * Given two numbers,
+   * When we do the 'add' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -30,8 +30,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given two numbers.
-   * When we do the 'subtraction' operation.
+   * Given two numbers,
+   * When we do the 'subtraction' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -42,8 +42,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given two numbers.
-   * When we do the 'multiplication' operation.
+   * Given two numbers,
+   * When we do the 'multiplication' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -54,8 +54,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given two numbers.
-   * When we do the 'division' operation.
+   * Given two numbers,
+   * When we do the 'division' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -66,8 +66,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given two numbers.
-   * When we do the 'power' operation.
+   * Given two numbers,
+   * When we do the 'power' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -78,8 +78,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given a numbers.
-   * When we do the 'square root' operation.
+   * Given a numbers,
+   * When we do the 'square root' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -90,8 +90,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given a numbers.
-   * When we do the 'cubic root' operation.
+   * Given a numbers,
+   * When we do the 'cubic root' operation,
    * Then we get the result of the operation.
    */
   @Test
@@ -102,8 +102,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given a number.
-   * When we apply the 'exponential' function.
+   * Given a number,
+   * When we apply the 'exponential' function,
    * Then we get the result of the function.
    */
   @Test
@@ -114,8 +114,8 @@ public class OperationsDaoTest {
   }
 
   /**
-   * Given a number.
-   * When we do the 'absolute value' operation.
+   * Given a number,
+   * When we do the 'absolute value' operation,
    * Then we get the result of the operation.
    */
   @Test
