@@ -1,0 +1,7 @@
+.DS_Store
+*.orig
+/build
+.idea
+
+src/main/resources/application-local.properties
+src/main/resources/localdev-config.json

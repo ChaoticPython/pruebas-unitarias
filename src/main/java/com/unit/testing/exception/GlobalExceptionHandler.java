@@ -1,6 +1,7 @@
 package com.unit.testing.exception;
 
 import com.unit.testing.model.ErrorResponse;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -8,18 +9,23 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+/**
+ * This is the class handler of exceptions, in her we put the necesary exceptions.
+ * 
+ * @author JulioPachecoSanginez
+ *
+ */
 @EnableWebMvc
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
   /**
-  * Manejamos una excepción de tipo BAD REQUEST
-  *
-  * @author jeps
-  * @version 1.0
-  * @return Response Entity w/ BAD REQUEST
-  * @exception Bad Request
-  */
+   * This method is the handler for a BadRequestException.
+   * 
+   * @param bre as BadRequestException.
+   * @param wr as WebRequest.
+   * @return a ResponseEntity with the status and exception.
+   */
   @ExceptionHandler(BadRequestException.class)
   public ResponseEntity<ErrorResponse> handleBadRequestException(BadRequestException bre,
       WebRequest wr) {

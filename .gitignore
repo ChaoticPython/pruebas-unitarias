@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -33,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 ||||||| empty tree
-=======
+
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
@@ -84,4 +83,10 @@ Thumbs.db
 *.mov
 *.wmv
 
->>>>>>> a7ca6d7d25ba33a3778bfe4cc1a3b68457bea9cb
+.DS_Store
+*.orig
+/build
+.idea
+
+src/main/resources/application-local.properties
+src/main/resources/localdev-config.json
