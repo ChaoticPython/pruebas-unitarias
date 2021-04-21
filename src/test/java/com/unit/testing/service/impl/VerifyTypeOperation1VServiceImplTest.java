@@ -43,10 +43,10 @@ public class VerifyTypeOperation1VServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void testVerifyTypeOperationError() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(3121.21);
+    request.setFirstValue(3121.21);
     request.setOption("other");
 
-    verifyOperation.verifyTypeOperation(request.getVal1(), request.getOption());
+    verifyOperation.verifyTypeOperation(request.getFirstValue(), request.getOption());
   }
 
   /**
@@ -58,16 +58,16 @@ public class VerifyTypeOperation1VServiceImplTest {
   @Test
   public void testVerifyTypeOperationSqrt() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(100.0);
+    request.setFirstValue(100.0);
     request.setOption("sqrt");
     Double result = 10.0;
 
     ResultResponse previewResponse = generateResponse(result);
-    Mockito.when(operationsDAO.raizCuadrada(request.getVal1()))
+    Mockito.when(operationsDAO.raizCuadrada(request.getFirstValue()))
         .thenReturn(previewResponse.getResultado());
 
     ResultResponse response =
-        verifyOperation.verifyTypeOperation(request.getVal1(), request.getOption());
+        verifyOperation.verifyTypeOperation(request.getFirstValue(), request.getOption());
 
     assertNotNull(response);
   }
@@ -81,16 +81,16 @@ public class VerifyTypeOperation1VServiceImplTest {
   @Test
   public void testVerifyTypeOperationCbrt() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(8.0);
+    request.setFirstValue(8.0);
     request.setOption("cbrt");
     Double result = 2.0;
 
     ResultResponse previewResponse = generateResponse(result);
-    Mockito.when(operationsDAO.raizCubica(request.getVal1()))
+    Mockito.when(operationsDAO.raizCubica(request.getFirstValue()))
         .thenReturn(previewResponse.getResultado());
 
     ResultResponse response =
-        verifyOperation.verifyTypeOperation(request.getVal1(), request.getOption());
+        verifyOperation.verifyTypeOperation(request.getFirstValue(), request.getOption());
 
     assertNotNull(response);
   }
@@ -104,16 +104,16 @@ public class VerifyTypeOperation1VServiceImplTest {
   @Test
   public void testVerifyTypeOperationExp() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(1.0);
+    request.setFirstValue(1.0);
     request.setOption("exp");
     Double result = 2.718281828459045;
 
     ResultResponse previewResponse = generateResponse(result);
-    Mockito.when(operationsDAO.exponente(request.getVal1()))
+    Mockito.when(operationsDAO.exponente(request.getFirstValue()))
         .thenReturn(previewResponse.getResultado());
 
     ResultResponse response =
-        verifyOperation.verifyTypeOperation(request.getVal1(), request.getOption());
+        verifyOperation.verifyTypeOperation(request.getFirstValue(), request.getOption());
 
     assertNotNull(response);
   }
@@ -127,16 +127,16 @@ public class VerifyTypeOperation1VServiceImplTest {
   @Test
   public void testVerifyTypeOperationAbs() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(-27.0);
+    request.setFirstValue(-27.0);
     request.setOption("abs");
     Double result = 27.0;
 
     ResultResponse previewResponse = generateResponse(result);
-    Mockito.when(operationsDAO.valorAbsoluto(request.getVal1()))
+    Mockito.when(operationsDAO.valorAbsoluto(request.getFirstValue()))
         .thenReturn(previewResponse.getResultado());
 
     ResultResponse response =
-        verifyOperation.verifyTypeOperation(request.getVal1(), request.getOption());
+        verifyOperation.verifyTypeOperation(request.getFirstValue(), request.getOption());
 
     assertNotNull(response);
   }

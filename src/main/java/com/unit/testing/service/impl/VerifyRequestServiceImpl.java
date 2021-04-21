@@ -44,22 +44,22 @@ public class VerifyRequestServiceImpl implements IVerifyRequestService {
     // Aquí voy a recibir mi resultado
     ResultResponse response = new ResultResponse();
     // Comprobamos nuestra petición
-    if (request.getVal1() == null && request.getVal2() == null || request.getOption() == null) {
+    if (request.getFirstValue() == null && request.getSecondValue() == null || request.getOption() == null) {
       // Tiramos un error por request invalido
       throw new BadRequestException("Hacen falta datos en la petición o está vacía");
     } else {
       // Aquí dirigimos a otro Service según la opción
-      if (request.getVal1() != null && request.getVal2() != null) {
+      if (request.getFirstValue() != null && request.getSecondValue() != null) {
         // Dirigimos a Service que maneja operaciones con 2 valores
-        response = verifyTypeOperation2VService.verifyTypeOperation(request.getVal1(),
-            request.getVal2(), request.getOption());
-      } else if (request.getVal1() != null && request.getVal2() == null) {
+        response = verifyTypeOperation2VService.verifyTypeOperation(request.getFirstValue(),
+            request.getSecondValue(), request.getOption());
+      } else if (request.getFirstValue() != null && request.getSecondValue() == null) {
         // Dirigimos a Service que maneja operaciones con 1 valor
-        response = verifyTypeOperation1VService.verifyTypeOperation(request.getVal1(),
+        response = verifyTypeOperation1VService.verifyTypeOperation(request.getFirstValue(),
             request.getOption());
-      } else if (request.getVal1() == null && request.getVal2() != null) {
+      } else if (request.getFirstValue() == null && request.getSecondValue() != null) {
         // Dirigimos a Service que maneja operaciones con 1 valor
-        response = verifyTypeOperation1VService.verifyTypeOperation(request.getVal2(),
+        response = verifyTypeOperation1VService.verifyTypeOperation(request.getSecondValue(),
             request.getOption());
       }
     }

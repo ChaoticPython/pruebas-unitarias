@@ -27,13 +27,13 @@ public class VerifyTypeOperation2VServiceImpl implements IVerifyTypeOperation2VS
    * This method receive two values (numbers) and the option, then calls the operation of the option
    * provided.
    * 
-   * @param val1 as a number.
-   * @param val2 as a number.
+   * @param firstValue as a number.
+   * @param secondValue as a number.
    * @param option as the operation.
    * @return a response with the result of the operation received.
    */
   @Override
-  public ResultResponse verifyTypeOperation(Double val1, Double val2, String option) {
+  public ResultResponse verifyTypeOperation(Double firstValue, Double secondValue, String option) {
     ResultResponse response = new ResultResponse();
     // Verificamos el tipo de operación que se solicita
     if (option.length() > 1) {
@@ -42,15 +42,15 @@ public class VerifyTypeOperation2VServiceImpl implements IVerifyTypeOperation2VS
     } else {
       if (option.equals("+")) {
         // Invocamos la operación deseada en el DAO
-        response.setResultado(operationsDao.suma(val1, val2));
+        response.setResultado(operationsDao.suma(firstValue, secondValue));
       } else if (option.equals("-")) {
-        response.setResultado(operationsDao.resta(val1, val2));
+        response.setResultado(operationsDao.resta(firstValue, secondValue));
       } else if (option.equals("*")) {
-        response.setResultado(operationsDao.multiplicacion(val1, val2));
+        response.setResultado(operationsDao.multiplicacion(firstValue, secondValue));
       } else if (option.equals("/")) {
-        response.setResultado(operationsDao.division(val1, val2));
+        response.setResultado(operationsDao.division(firstValue, secondValue));
       } else if (option.equals("^")) {
-        response.setResultado(operationsDao.potencia(val1, val2));
+        response.setResultado(operationsDao.potencia(firstValue, secondValue));
       } else {
         throw new BadRequestException("No existe dicha operacion");
       }

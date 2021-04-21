@@ -14,10 +14,10 @@ public interface IVerifyTypeOperation1VService {
    * We're going to use this interface method in our service that needs only one parameter (number)
    * and the option wanted.
    * 
-   * @param val as number.
+   * @param value as number.
    * @param option as the operation.
    * @return a response with the result of the operation.
    */
-  ResultResponse verifyTypeOperation(Double val, String option);
+  ResultResponse verifyTypeOperation(Double value, String option);
 
 }

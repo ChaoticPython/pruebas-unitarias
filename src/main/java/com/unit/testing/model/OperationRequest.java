@@ -16,10 +16,10 @@ public class OperationRequest {
   /**
    * Our attributes for get the values and the operation option for process the request.
    */
-  private Double val1;
+  private Double firstValue;
 
   private String option;
 
-  private Double val2;
+  private Double secondValue;
 
 }

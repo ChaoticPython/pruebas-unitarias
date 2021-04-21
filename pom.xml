@@ -21,18 +21,12 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
-<<<<<<< HEAD
 		
-		<sonar.coverage.exclusions>
-			**/model/**	
-		</sonar.coverage.exclusions>
-||||||| b7cdd7a
-=======
 		<!-- EXCLUSIONES CON SONARQUBE -->
 		<sonar.coverage.exclusions>
 			**/model/**
 		</sonar.coverage.exclusions>
->>>>>>> c55e1239948014d61b7aec90bfdaebc73132c669
+		
 	</properties>
 
 	<dependencies>

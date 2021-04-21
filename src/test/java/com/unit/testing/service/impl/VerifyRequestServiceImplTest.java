@@ -50,8 +50,8 @@ public class VerifyRequestServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void retrieveResultResponseAllNull() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(null);
-    request.setVal2(null);
+    request.setFirstValue(null);
+    request.setSecondValue(null);
     request.setOption(null);
 
     verifyRequest.retrieveResultResponse(request);
@@ -65,8 +65,8 @@ public class VerifyRequestServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void retrieveResultResponse2VNull() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(null);
-    request.setVal2(null);
+    request.setFirstValue(null);
+    request.setSecondValue(null);
     request.setOption("any");
 
     verifyRequest.retrieveResultResponse(request);
@@ -80,8 +80,8 @@ public class VerifyRequestServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void retrieveResultResponseVal2Null() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(98.31);
-    request.setVal2(null);
+    request.setFirstValue(98.31);
+    request.setSecondValue(null);
     request.setOption(null);
 
     verifyRequest.retrieveResultResponse(request);
@@ -95,8 +95,8 @@ public class VerifyRequestServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void retrieveResultResponseVal1Null() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(null);
-    request.setVal2(9823.121);
+    request.setFirstValue(null);
+    request.setSecondValue(9823.121);
     request.setOption(null);
 
     verifyRequest.retrieveResultResponse(request);
@@ -110,8 +110,8 @@ public class VerifyRequestServiceImplTest {
   @Test(expected = BadRequestException.class)
   public void retrieveResultResponseOptionNull() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(1.2192);
-    request.setVal2(31.21);
+    request.setFirstValue(1.2192);
+    request.setSecondValue(31.21);
     request.setOption(null);
 
     verifyRequest.retrieveResultResponse(request);
@@ -125,12 +125,12 @@ public class VerifyRequestServiceImplTest {
   @Test
   public void retrieveResultResponseWithFirstValue() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(1.2192);
-    request.setVal2(null);
+    request.setFirstValue(1.2192);
+    request.setSecondValue(null);
     request.setOption("option");
 
     ResultResponse previewResponse = new ResultResponse();
-    Mockito.when(verifyOperation1Value.verifyTypeOperation(request.getVal1(), request.getOption()))
+    Mockito.when(verifyOperation1Value.verifyTypeOperation(request.getFirstValue(), request.getOption()))
         .thenReturn(previewResponse);
 
     ResultResponse response = verifyRequest.retrieveResultResponse(request);
@@ -146,12 +146,12 @@ public class VerifyRequestServiceImplTest {
   @Test
   public void retrieveResultResponseWithSecondValue() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(null);
-    request.setVal2(31.21);
+    request.setFirstValue(null);
+    request.setSecondValue(31.21);
     request.setOption("option");
 
     ResultResponse previewResponse = new ResultResponse();
-    Mockito.when(verifyOperation1Value.verifyTypeOperation(request.getVal2(), request.getOption()))
+    Mockito.when(verifyOperation1Value.verifyTypeOperation(request.getSecondValue(), request.getOption()))
         .thenReturn(previewResponse);
 
     ResultResponse response = verifyRequest.retrieveResultResponse(request);
@@ -167,12 +167,12 @@ public class VerifyRequestServiceImplTest {
   @Test
   public void retrieveResultResponseWithValues() {
     OperationRequest request = new OperationRequest();
-    request.setVal1(1.2192);
-    request.setVal2(31.21);
+    request.setFirstValue(1.2192);
+    request.setSecondValue(31.21);
     request.setOption("option");
 
     ResultResponse previewResponse = new ResultResponse();
-    Mockito.when(verifyOperation2Value.verifyTypeOperation(request.getVal1(), request.getVal2(),
+    Mockito.when(verifyOperation2Value.verifyTypeOperation(request.getFirstValue(), request.getSecondValue(),
         request.getOption())).thenReturn(previewResponse);
 
     ResultResponse response = verifyRequest.retrieveResultResponse(request);

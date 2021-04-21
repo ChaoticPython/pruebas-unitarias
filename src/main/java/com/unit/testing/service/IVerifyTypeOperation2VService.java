@@ -14,11 +14,11 @@ public interface IVerifyTypeOperation2VService {
    * We're going to use this interface method in our service that needs the values
    * and the option wanted.
    * 
-   * @param val1 as number.
-   * @param val2 as number.
+   * @param firstValue as number.
+   * @param secondValue as number.
    * @param option as the operation.
    * @return a response with the result of the operation.
    */
-  ResultResponse verifyTypeOperation(Double val1, Double val2, String option);
+  ResultResponse verifyTypeOperation(Double firstValue, Double secondValue, String option);
 
 }
