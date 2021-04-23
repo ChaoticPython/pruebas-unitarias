@@ -12,17 +12,35 @@ import com.unit.testing.model.ResultResponse;
 public interface IVerifyRequestService {
 
   /**
-   * We're going to use this interface method in our principal Service.
+   * Use this interface method in our Service to retrieve a response.
    * 
    * @param request as request.
    * @return a response with the result of the operation.
    */
   ResultResponse retrieveResultResponse(OperationRequest request);
-  
+
+  /**
+   * Use this interface method in our Service to verify the request.
+   * 
+   * @param request as request.
+   * @return the possible result of the request.
+   */
   Double verifyRequest(OperationRequest request);
-  
+
+  /**
+   * Use this interface method in our Service to verify the values in the request.
+   * 
+   * @param request as request.
+   * @return the result of the operation desirable.
+   */
   Double verifyTwoPossibleValues(OperationRequest request);
-  
+
+  /**
+   * Use this interface method in our Service to verify the values in the request.
+   * 
+   * @param request as request.
+   * @return the result of the operation desirable.
+   */
   Double verifyOnePossibleValue(OperationRequest request);
 
 }

@@ -1,7 +1,6 @@
 package com.unit.testing.exception;
 
 import com.unit.testing.model.ErrorResponse;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
