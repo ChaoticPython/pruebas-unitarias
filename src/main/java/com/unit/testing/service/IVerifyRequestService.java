@@ -19,28 +19,4 @@ public interface IVerifyRequestService {
    */
   ResultResponse retrieveResultResponse(OperationRequest request);
 
-  /**
-   * Use this interface method in our Service to verify the request.
-   * 
-   * @param request as request.
-   * @return the possible result of the request.
-   */
-  Double verifyRequest(OperationRequest request);
-
-  /**
-   * Use this interface method in our Service to verify the values in the request.
-   * 
-   * @param request as request.
-   * @return the result of the operation desirable.
-   */
-  Double verifyTwoPossibleValues(OperationRequest request);
-
-  /**
-   * Use this interface method in our Service to verify the values in the request.
-   * 
-   * @param request as request.
-   * @return the result of the operation desirable.
-   */
-  Double verifyOnePossibleValue(OperationRequest request);
-
 }

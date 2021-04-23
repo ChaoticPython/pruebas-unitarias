@@ -52,8 +52,7 @@ public class VerifyRequestServiceImpl implements IVerifyRequestService {
    * @param request as request.
    * @return the possible value of the operation.
    */
-  @Override
-  public Double verifyRequest(OperationRequest request) {
+  private Double verifyRequest(OperationRequest request) {
     if (request.getFirstValue() == null && request.getSecondValue() == null
         || request.getOption() == null) {
       // Tiramos un error por request invalido
@@ -73,8 +72,7 @@ public class VerifyRequestServiceImpl implements IVerifyRequestService {
    * @param request as request.
    * @return the value of the operation.
    */
-  @Override
-  public Double verifyTwoPossibleValues(OperationRequest request) {
+  private Double verifyTwoPossibleValues(OperationRequest request) {
     if (request.getFirstValue() != null && request.getSecondValue() != null) {
       // Retornamos el valor de la operación en caso de obtener 2 valores
       return operationsTwoValuesDao.doOperation(request.getOption(), request.getFirstValue(),
@@ -92,8 +90,7 @@ public class VerifyRequestServiceImpl implements IVerifyRequestService {
    * @param request as request.
    * @return the value of the operation.
    */
-  @Override
-  public Double verifyOnePossibleValue(OperationRequest request) {
+  private Double verifyOnePossibleValue(OperationRequest request) {
     if (request.getFirstValue() != null) {
       // Retornamos el resultado de la operación con el primer valor
       return operationsOneValueDao.doOperation(request.getOption(), request.getFirstValue());
