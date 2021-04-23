@@ -18,5 +18,11 @@ public interface IVerifyRequestService {
    * @return a response with the result of the operation.
    */
   ResultResponse retrieveResultResponse(OperationRequest request);
+  
+  Double verifyRequest(OperationRequest request);
+  
+  Double verifyTwoPossibleValues(OperationRequest request);
+  
+  Double verifyOnePossibleValue(OperationRequest request);
 
 }
