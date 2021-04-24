@@ -1,6 +1,9 @@
 package com.unit.testing.dao;
 
+import com.unit.testing.OperationsHelper;
 import com.unit.testing.exception.BadRequestException;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -22,6 +25,9 @@ public class OperationsTwoValuesDao {
    * 
    */
   private Map<String, BiFunction<Double, Double, Double>> operations;
+  
+  @Autowired
+  private OperationsHelper operationsHelper;
 
   /**
    * This method initialize a Map and define the operations.
@@ -30,10 +36,10 @@ public class OperationsTwoValuesDao {
   @PostConstruct
   public void init() {
     operations = new HashMap<>();
-    operations.put("+", (firstValue, secondValue) -> firstValue + secondValue);
-    operations.put("-", (firstValue, secondValue) -> firstValue - secondValue);
-    operations.put("*", (firstValue, secondValue) -> firstValue * secondValue);
-    operations.put("/", (firstValue, secondValue) -> firstValue / secondValue);
+    operations.put("+", operationsHelper::add);
+    operations.put("-", operationsHelper::less);
+    operations.put("*", operationsHelper::multiplication);
+    operations.put("/", operationsHelper::division);
     operations.put("^", Math::pow);
   }
   
