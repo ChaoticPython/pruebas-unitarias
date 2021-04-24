@@ -11,9 +11,5 @@ public class OperationOneValueDaoTest {
   @InjectMocks
   private OperationOneValueDao operationOneValueDao;
   
-  @Test
-  public void initInitializer() {
-    operationOneValueDao.init();
-  }
   
 }

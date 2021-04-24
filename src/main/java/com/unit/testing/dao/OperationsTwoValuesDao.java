@@ -34,7 +34,7 @@ public class OperationsTwoValuesDao {
     operations.put("-", (firstValue, secondValue) -> firstValue - secondValue);
     operations.put("*", (firstValue, secondValue) -> firstValue * secondValue);
     operations.put("/", (firstValue, secondValue) -> firstValue / secondValue);
-    operations.put("^", (firstValue, secondValue) -> Math.pow(firstValue, secondValue));
+    operations.put("^", Math::pow);
   }
   
   /**

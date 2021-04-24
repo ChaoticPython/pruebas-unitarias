@@ -30,10 +30,10 @@ public class OperationOneValueDao {
   @PostConstruct
   public void init() {
     operations = new HashMap<>();
-    operations.put("sqrt", value -> Math.sqrt(value));
-    operations.put("cbrt", value -> Math.cbrt(value));
-    operations.put("exp", value -> Math.exp(value));
-    operations.put("abs", value -> Math.abs(value));
+    operations.put("sqrt", Math::sqrt);
+    operations.put("cbrt", Math::cbrt);
+    operations.put("exp", Math::exp);
+    operations.put("abs", Math::abs);
   }
 
   /**
