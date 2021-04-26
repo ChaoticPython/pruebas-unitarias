@@ -47,7 +47,7 @@ public class VerifyRequestServiceImplTest {
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
-  public void retrieveResultResponseAllNull() {
+  public void testRetrieveResultResponseAllNull() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(null);
     request.setSecondValue(null);
@@ -62,7 +62,7 @@ public class VerifyRequestServiceImplTest {
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
-  public void retrieveResultResponse2VNull() {
+  public void testRetrieveResultResponse2VNull() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(null);
     request.setSecondValue(null);
@@ -77,7 +77,7 @@ public class VerifyRequestServiceImplTest {
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
-  public void retrieveResultResponseVal2Null() {
+  public void testRetrieveResultResponseVal2Null() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(98.31);
     request.setSecondValue(null);
@@ -92,7 +92,7 @@ public class VerifyRequestServiceImplTest {
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
-  public void retrieveResultResponseVal1Null() {
+  public void testRetrieveResultResponseVal1Null() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(null);
     request.setSecondValue(9823.121);
@@ -107,7 +107,7 @@ public class VerifyRequestServiceImplTest {
    * Then throw a BadRequestException.
    */
   @Test(expected = BadRequestException.class)
-  public void retrieveResultResponseOptionNull() {
+  public void testRetrieveResultResponseOptionNull() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(1.2192);
     request.setSecondValue(31.21);
@@ -122,7 +122,7 @@ public class VerifyRequestServiceImplTest {
    * Then do the operation desired and return the response.
    */
   @Test
-  public void retrieveResultResponseWithValues() {
+  public void testRetrieveResultResponseWithValues() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(1.2192);
     request.setSecondValue(31.21);
@@ -139,7 +139,7 @@ public class VerifyRequestServiceImplTest {
    * Then do the operation desired and return the response.
    */
   @Test
-  public void retrieveResultResponseWithSecondValue() {
+  public void tstRetrieveResultResponseWithSecondValue() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(null);
     request.setSecondValue(31.21);
@@ -156,7 +156,7 @@ public class VerifyRequestServiceImplTest {
    * Then do the operation desired and return the response.
    */
   @Test
-  public void retrieveResultResponseWithFirstValue() {
+  public void testRetrieveResultResponseWithFirstValue() {
     OperationRequest request = new OperationRequest();
     request.setFirstValue(1.2192);
     request.setSecondValue(null);

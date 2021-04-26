@@ -1,7 +1,7 @@
 package com.unit.testing.dao;
 
-import com.unit.testing.OperationsHelper;
 import com.unit.testing.exception.BadRequestException;
+import com.unit.testing.helper.OperationsHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,6 +26,10 @@ public class OperationsTwoValuesDao {
    */
   private Map<String, BiFunction<Double, Double, Double>> operations;
   
+  /**
+   * An instance that helps with our operations.
+   * 
+   */
   @Autowired
   private OperationsHelper operationsHelper;
 
@@ -37,7 +41,7 @@ public class OperationsTwoValuesDao {
   public void init() {
     operations = new HashMap<>();
     operations.put("+", operationsHelper::add);
-    operations.put("-", operationsHelper::less);
+    operations.put("-", operationsHelper::subtraction);
     operations.put("*", operationsHelper::multiplication);
     operations.put("/", operationsHelper::division);
     operations.put("^", Math::pow);
@@ -52,9 +56,9 @@ public class OperationsTwoValuesDao {
    * @param secondValue as the secondValue to evaluate.
    * @return the result (Double) of the operation or an exception if has a problem.
    */
-  public Double doOperation(String option, Double firstValue, Double secondValue) {
-    if(operations.containsKey(option)) {
-      return operations.get(option).apply(firstValue, secondValue);
+  public Double doOperation(String operation, Double firstValue, Double secondValue) {
+    if(operations.containsKey(operation)) {
+      return operations.get(operation).apply(firstValue, secondValue);
     } else {
       throw new BadRequestException("The operation doesn't exist, check it.");
     }
