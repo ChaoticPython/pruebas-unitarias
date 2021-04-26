@@ -25,7 +25,7 @@ public class OperationsTwoValuesDao {
    * 
    */
   private Map<String, BiFunction<Double, Double, Double>> operations;
-  
+
   /**
    * An instance that helps with our operations.
    * 
@@ -46,7 +46,7 @@ public class OperationsTwoValuesDao {
     operations.put("/", operationsHelper::division);
     operations.put("^", Math::pow);
   }
-  
+
   /**
    * This method verify if the operation sent in the request exists. If the operation doesn't
    * exists, then throw an exception.
@@ -57,11 +57,11 @@ public class OperationsTwoValuesDao {
    * @return the result (Double) of the operation or an exception if has a problem.
    */
   public Double doOperation(String operation, Double firstValue, Double secondValue) {
-    if(operations.containsKey(operation)) {
+    if (operations.containsKey(operation)) {
       return operations.get(operation).apply(firstValue, secondValue);
     } else {
       throw new BadRequestException("The operation doesn't exist, check it.");
     }
   }
-  
+
 }
